@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer';
 function About() {
 
     const { ref, inView } = useInView({
-        threshold: 0.5, // Trigger animation when 50% of the About section is in view
+        threshold: 0.3, // Trigger animation when 50% of the About section is in view
         triggerOnce: true // Trigger animation only once
     });
 
@@ -24,7 +24,7 @@ function About() {
                 ref={ref}
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.2 }}
                 className="bg-slate-950 text-white" id='about'>
 
                 <motion.div

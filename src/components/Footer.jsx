@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 function Footer() {
 
     const { ref, inView } = useInView({
-        threshold: 0.5, // Trigger animation when 50% of the About section is in view
+        threshold: 0.3, // Trigger animation when 50% of the About section is in view
         triggerOnce: true // Trigger animation only once
     });
 
@@ -30,7 +30,7 @@ function Footer() {
             ref={ref}
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.2 }}
             className="bg-slate-900">
             <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
                 <motion.div initial={{ opacity: 0, y: 20 }}

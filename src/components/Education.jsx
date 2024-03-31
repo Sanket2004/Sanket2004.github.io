@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 
 function Education() {
     const { ref, inView } = useInView({
-        threshold: 1, // Trigger animation when 50% of the Education section is in view
+        threshold: 0.8, // Trigger animation when 50% of the Education section is in view
         triggerOnce: true // Trigger animation only once
     });
 
@@ -15,7 +15,7 @@ function Education() {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                        transition={{ delay: 0.3, duration: 0.5 }}
+                        transition={{ duration: 0.2 }}
                         className="text-3xl font-extrabold pb-2 sm:text-4xl border-b-8 w-min border-cyan-600">
                         Education
                     </motion.h1>

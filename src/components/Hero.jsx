@@ -25,7 +25,7 @@ function Hero() {
                         >
                             <motion.img
                                 alt="Sanket Banerjee"
-                                src="src/assets/s.png"
+                                src="/s.png"
                                 className="bg-cyan-500 h-64 w-64 sm:h-80 sm:w-80 lg:h-80 lg:w-80 object-cover rounded-full lg:rounded-full lg:rotate-6 lg:mr-6 lg:shadow-[-14px_14px_0_0_white] transition-all duration-300 ease-in-out hover:rotate-0 hover:shadow-[0px_0px_0_0_white] hover:rounded-full"
                                 whileHover={{ rotate: 0, scale: 0.9, boxShadow: "0px 0px 0px 0px white" }} // Animation on hover
                             />
@@ -77,7 +77,7 @@ function Hero() {
                                 <motion.a
                                     whileHover={{ scale: 1.1 }} // Animation on hover
                                     whileTap={{ scale: 0.9 }} // Animation on tap
-                                    href="src/assets/Sanket's Resume.pdf"
+                                    href="/sanket_resume.pdf"
                                     className="flex justify-center items-center gap-2 w-full rounded bg-white px-8 py-3 text-sm font-medium text-cyan-600 shadow hover:text-cyan-700 focus:outline-none focus:ring active:text-cyan-500 sm:w-auto"
                                 >
                                     Resume <i className="text fa-regular fa-file-lines"></i>

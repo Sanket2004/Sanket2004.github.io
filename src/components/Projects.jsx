@@ -46,7 +46,7 @@ function Projects() {
                                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                     transition={{ delay: 0.9, duration: 0.5 }}
                                     alt="Daily News Logo"
-                                    src="src\assets\projects\dailynews.png"
+                                    src="src/assets/projects/dailynews.png"
                                     className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
                                 />
 
@@ -83,7 +83,7 @@ function Projects() {
                                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                     transition={{ delay: 0.9, duration: 0.5 }}
                                     alt="Fancy Font Generator"
-                                    src="src\assets\projects\Fancy-Font-Generator.png"
+                                    src="src/assets/projects/Fancy-Font-Generator.png"
                                     className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
                                 />
 
@@ -120,7 +120,7 @@ function Projects() {
                                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                     transition={{ delay: 0.9, duration: 0.5 }}
                                     alt="Shortly Logo"
-                                    src="src\assets\projects\Shortly.png"
+                                    src="src/assets/projects/Shortly.png"
                                     className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
                                 />
 
@@ -157,7 +157,7 @@ function Projects() {
                                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                     transition={{ delay: 0.9, duration: 0.5 }}
                                     alt="Just Type"
-                                    src="src\assets\projects\Assignment Writer.png"
+                                    src="src/assets/projects/Assignment Writer.png"
                                     className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
                                 />
 
@@ -194,7 +194,7 @@ function Projects() {
                                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                     transition={{ delay: 0.9, duration: 0.5 }}
                                     alt="Just Type"
-                                    src="src\assets\projects\docsme.png"
+                                    src="src/assets/projects/docsme.png"
                                     className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
                                 />
 

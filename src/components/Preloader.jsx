@@ -1,12 +1,26 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 function Preloader() {
     return (
-        <div className="w-full h-screen	bg-slate-950 overflow-hidden	">
-            <div className='fixed top-1/2 left-1/2 translate-y-[-50%]	translate-x-[-50%]	'>
-                <button type="button" className=" flex p-4 text-grey" disabled>
-                    <svg className="animate-spin h-12 w-12 mr-3 " fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22c5.421 0 10-4.579 10-10h-2c0 4.337-3.663 8-8 8s-8-3.663-8-8c0-4.336 3.663-8 8-8V2C6.579 2 2 6.58 2 12c0 5.421 4.579 10 10 10z"/></svg>
-                </button>
+        <div className="w-full h-screen	bg-stone-950 overflow-hidden	">
+            <div className='fixed top-1/2 left-1/2 translate-y-[-50%]	translate-x-[-50%]	flex justify-center items-center flex-col text-center'>
+                <motion.h1
+                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    transition={{ delay: 0, duration: 0.5 }}
+                    className='text-white font-bold sm:text-4xl text-2xl mb-4 text-stone-500'
+                >
+                    <code>
+                        {"<Loading/>"}
+                        </code>
+                </motion.h1>
+
+                <motion.h2
+                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    transition={{ delay: 0.5, duration: 0.5 }}
+                    className='text-white sm:text-sm text-xs'>I am getting ready.</motion.h2>
             </div>
         </div>
     )

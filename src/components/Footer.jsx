@@ -1,22 +1,9 @@
 import { motion } from 'framer-motion'
 import React, { useEffect } from 'react'
-import { useInView } from 'react-intersection-observer';
+
 
 
 function Footer() {
-
-    const { ref, inView } = useInView({
-        threshold: 0.3, // Trigger animation when 50% of the About section is in view
-        triggerOnce: true // Trigger animation only once
-    });
-
-    useEffect(() => {
-        if (inView) {
-            console.log("in projcts");
-            // Start animation when About section comes into view
-            // You can add more logic or start additional animations here
-        }
-    }, [inView]);
 
     function scrollToTop() {
         window.scrollTo({
@@ -26,19 +13,16 @@ function Footer() {
     }
 
     return (
-        <motion.footer
-            ref={ref}
-            initial={{ opacity: 0, y: 50 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.2 }}
-            className="bg-slate-900">
+        <footer
+            className="bg-stone-900">
             <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
-                <motion.div initial={{ opacity: 0, y: 20 }}
-                    animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ delay: 0.7, duration: 0.5 }}
-                    className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
-                    <a
-                        className="cursor-pointer inline-block rounded-full bg-cyan-600 p-2 text-white shadow transition hover:bg-cyan-500 sm:p-3 lg:p-4"
+                <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
+                    <motion.a
+                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        transition={{ delay: 0, duration: 0.5 }}
+                        whileHover={{ scale: 1.1, transition: { dealy: 0, duration: 0.1, ease: "easeInOut" } }} 
+                        className="cursor-pointer inline-block rounded-full bg-stone-600 p-2 text-white shadow sm:p-3 lg:p-4"
                         onClick={scrollToTop}
                     >
                         <span className="sr-only">Back to top</span>
@@ -55,52 +39,75 @@ function Footer() {
                                 clipRule="evenodd"
                             />
                         </svg>
-                    </a>
-                </motion.div>
+                    </motion.a>
 
-                <motion.div initial={{ opacity: 0, y: 20 }}
-                    animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ delay: 0.8, duration: 0.5 }}
-                    className="lg:flex lg:items-end lg:justify-between">
+                </div>
+
+                <div className="lg:flex lg:items-end lg:justify-between">
                     <div>
-                        <div className="flex justify-center text-cyan-500 lg:justify-start">
-                            <h1 className='font-bold text-2xl'>Sanket Banerjee</h1>
+                        <div className="flex justify-center text-stone-500 lg:justify-start">
+                            <motion.h1
+                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, x: -20 }}
+                                transition={{ delay: 0, duration: 0.5 }}
+                                className='font-bold text-2xl'>Sanket Banerjee</motion.h1>
                         </div>
 
-                        <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-300 lg:text-left">
+                        <motion.p
+                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, x: -20 }}
+                            transition={{ delay: 0.5, duration: 0.5 }}
+                            className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-300 lg:text-left">
                             An Android and Web Developer experienced in building full-stack responsive applications.
-                        </p>
+                        </motion.p>
                     </div>
 
                     <ul
                         className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12"
                     >
-                        <li>
-                            <a className="text-gray-500 transition hover:text-gray-500/75" href='#about' > About </a>
-                        </li>
+                        <motion.li
+                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, x: 20 }}
+                            transition={{ delay: 0.7, duration: 0.5 }}
+                        >
+                            <a className="text-gray-500" href='#about' > About </a>
+                        </motion.li>
 
-                        <li>
-                            <a className="text-gray-500 transition hover:text-gray-500/75" href="#education"> Education </a>
-                        </li>
+                        <motion.li
+                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, x: 20 }}
+                            transition={{ delay: 0.9, duration: 0.5 }}
+                        >
+                            <a className="text-gray-500" href="#education"> Education </a>
+                        </motion.li>
 
-                        <li>
-                            <a className="text-gray-500 transition hover:text-gray-500/75" href="#projects"> Projects </a>
-                        </li>
+                        <motion.li
+                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, x: 20 }}
+                            transition={{ delay: 1.1, duration: 0.5 }}
+                        >
+                            <a className="text-gray-500" href="#projects"> Projects </a>
+                        </motion.li>
 
-                        <li>
-                            <a className="text-gray-500 transition hover:text-gray-500/75" href="#contact"> Contact </a>
-                        </li>
+                        <motion.li
+                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, x: 20 }}
+                            transition={{ delay: 1.3, duration: 0.5 }}
+                        >
+                            <a className="text-gray-500" href="#contact"> Contact </a>
+                        </motion.li>
                     </ul>
-                </motion.div>
+                </div>
 
-                <motion.p initial={{ opacity: 0, y: 20 }}
-                    animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ delay: 0.9, duration: 0.5 }}
+                <motion.p
+                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    transition={{ delay: 1.5, duration: 0.5 }}
                     className="mt-12 text-center text-sm text-gray-500 lg:text-right">
                     Copyright &copy; 2024. All rights reserved.
                 </motion.p>
             </div>
-        </motion.footer>
+        </footer>
     )
 }
 

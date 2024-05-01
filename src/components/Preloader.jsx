@@ -9,7 +9,7 @@ function Preloader() {
                     whileInView={{ opacity: 1, y: 0 }}
                     initial={{ opacity: 0, y: 20 }}
                     transition={{ delay: 0, duration: 0.5 }}
-                    className='text-white font-bold sm:text-4xl text-2xl mb-4 text-stone-500'
+                    className='font-bold sm:text-4xl text-2xl mb-4 text-stone-500'
                 >
                     <code>
                         {"<Loading/>"}
